@@ -32,5 +32,5 @@ Please leave comments for any suggestions, questions or random stuff. See you in
 
 Cheers 
 
-{% include disqus.html %}
+
 
