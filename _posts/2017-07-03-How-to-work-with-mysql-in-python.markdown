@@ -40,17 +40,17 @@ In your code, import PyMySQL module and create the connection variable.
 Set these variables according to your environment. This will create the connection object. Our other tasks are dependent on this object and we’ll perform our tasks accordingly.
 
 ## Insert
-In code, have a look at insert_records() function. It is designed to take input until the user wants, save them in a list and insert records one by one.
+In code, have a look at `insert_records()` function. It is designed to take input until the user wants, save them in a list and insert records one by one.
 
 <script src="https://gist.github.com/prameshgautam/f849f1f0e468f7cba61ce86c712b1af2.js"></script>
 
-Input is being taken as per users’ desire and they are stored as queries in insert_queries list. prepare_insert_query() function creates all those queries. Loop is being applied in that list and cursor object executes those queries. conn.commit() will commit the results and if any exception is thrown then rollback is applied via conn.rollback().
+Input is being taken as per users’ desire and they are stored as queries in `insert_queries` list. `prepare_insert_query()` function creates all those queries. Loop is being applied in that list and cursor object executes those queries. `conn.commit()` will commit the results and if any exception is thrown then rollback is applied via `conn.rollback()`.
 
 ## Fetch Data
 
 <script src="https://gist.github.com/prameshgautam/a046a2ed49cafd33fb0ea5bccbc87081.js"></script>
 
-select query is passed to see_records() function. fetchall() method from cursor object lists the output which is iterable. In that iterator, loop is applied and the records are displayed.
+select query is passed to `see_records()` function. `fetchall()` method from cursor object lists the output which is iterable. In that iterator, loop is applied and the records are displayed.
 
 ## Update and Delete
 Similar is the case for update and delete part as well. Required queries are passed to cursor object’s execute method and the query is executed. In the cases where data is to be modified, `commit()` and `rollback()` methods have been used. They help to prevent the atomicity of database.
