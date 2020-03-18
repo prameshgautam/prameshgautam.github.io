@@ -71,4 +71,3 @@ Please comment if you’ve any queries/feedback. I’ll be happy to respond. I�
 [code]: https://github.com/pmgautam/play-react-integration
 [cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
-{% include disqus.html %}

@@ -40,5 +40,3 @@ Whenever you run this code, it will print true if the  value is found and false 
 
 I hope this article will be of use. If there are any queries/suggestions please comment them. I’ll see you in the next one. Cheers 🙂
 
-{% include disqus.html %}
-

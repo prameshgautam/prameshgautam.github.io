@@ -61,4 +61,3 @@ We will have some more tutorials with examples and some operations. Till then.. 
 [github_link]: https://www.dropbox.com/s/rnk0c6j4vl05pe8/cascading_intro_file.csv?dl=0
 [mockaroo]: [https://www.mockaroo.com/]
 
-{% include disqus.html %}

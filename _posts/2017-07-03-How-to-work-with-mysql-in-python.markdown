@@ -64,5 +64,3 @@ See you in the next one 🙂
 
 [1]: https://github.com/prameshgautam/ramzavil_python/blob/master/dbConnect.py
 
-{% include disqus.html %}
-
