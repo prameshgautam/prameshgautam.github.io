@@ -25,7 +25,6 @@ I had installed OpenVPN from repo and had two factor authentication enabled. If 
 
 [openvpn-download]: https://swupdate.openvpn.org/community/releases/openvpn-2.3.11.tar.gz
 
-{% include disqus.html %}
 
 
 
