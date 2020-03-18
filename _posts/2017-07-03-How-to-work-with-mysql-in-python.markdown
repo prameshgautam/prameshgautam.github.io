@@ -4,6 +4,7 @@ title: How to work with MySQL and Python using PyMySQL?
 date: 2017-07-03
 categories: Python
 permalink: /2017/07/03/how-to-work-with-mysql-in-python
+comments:true
 author: Pramesh
 ---
 
