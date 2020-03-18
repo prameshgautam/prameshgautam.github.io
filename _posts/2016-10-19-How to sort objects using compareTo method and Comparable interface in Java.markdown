@@ -5,7 +5,6 @@ date:   2016-10-19
 categories: Java
 permalink: /2016/10/19/how-to-sort-objects-using-compareto-method-and-comparable-interface-in-java/
 author: Pramesh
-comments:true
 ---
 
 
