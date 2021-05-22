@@ -27,7 +27,10 @@ twitter_username: pgautamm
 github_username:  prameshgautam
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "air" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
