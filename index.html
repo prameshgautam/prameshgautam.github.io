@@ -368,6 +368,64 @@
       margin-bottom: 0.25rem;
     }
 
+    .experience-list {
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .experience-card {
+      padding: 1.2rem 1.25rem;
+      border: 1px solid #e7eef4;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #fcfdfe, #f4f8fb);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .experience-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.65rem 1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .experience-title {
+      margin: 0;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .experience-period {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    }
+
+    .experience-meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .experience-summary {
+      margin: 0.7rem 0 0;
+      color: #2d3948;
+    }
+
+    .experience-points {
+      margin: 0.9rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .experience-points li + li {
+      margin-top: 0.45rem;
+    }
+
     .pub-note {
       margin-top: 0;
       margin-bottom: 1.25rem;
@@ -383,6 +441,14 @@
 
     .pub-year:first-of-type {
       margin-top: 0;
+    }
+
+    .subsection-title {
+      margin: 1.8rem 0 0.75rem;
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0.02em;
     }
 
     .pub-group {
@@ -487,6 +553,49 @@
       font-weight: 700;
     }
 
+    .skill-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-group-card {
+      padding: 1.15rem 1.2rem;
+      border: 1px solid #e7eef4;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #fbfdfe, #f3f8fb);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .skill-group-title {
+      margin: 0 0 0.8rem;
+      font-size: 1rem;
+      color: var(--accent-dark);
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    }
+
+    .skill-chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-chip-list li {
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #eef6fb, #dfeef8);
+      border: 1px solid #d9e9f3;
+      color: #294154;
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
     .muted {
       color: var(--muted);
     }
@@ -533,6 +642,11 @@
         padding: 0.9rem;
       }
 
+      .experience-card,
+      .skill-group-card {
+        padding: 1rem;
+      }
+
       .profile-highlights {
         grid-template-columns: 1fr;
       }
@@ -545,11 +659,12 @@
       <div class="site-name">Pramesh Gautam</div>
       <nav class="nav-links" aria-label="Primary Navigation">
         <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
         <a href="#research">Research Interests</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#supervision">Supervision</a>
-        <a href="#skills">Skills</a>
+        <a href="#skills">Technical Skills</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -618,6 +733,85 @@
           simulation frameworks can improve system robustness and support the demands of future wireless networks,
           including HRLLC use cases.
         </p>
+      </section>
+
+      <section id="experience" class="section-card">
+        <h2 class="section-title">Professional Experience</h2>
+        <ul class="experience-list">
+          <li>
+            <article class="experience-card">
+              <div class="experience-header">
+                <h3 class="experience-title">PhD Candidate / Research Assistant</h3>
+                <span class="experience-period">2022 – Present</span>
+              </div>
+              <p class="experience-meta">Department of Communications Engineering, University of Bremen · Bremen, Germany</p>
+              <p class="experience-summary">
+                Research on reliable physical-layer communication systems for 5G/6G networks, with a focus on interference prediction,
+                link adaptation, industrial subnetworks, probabilistic modeling, and robust wireless system design.
+              </p>
+              <ul class="experience-points">
+                <li>Design and evaluation of communication and signal-processing algorithms for reliable wireless systems under time-varying propagation, interference, and uncertainty.</li>
+                <li>Development of MATLAB- and Python-based simulation workflows for link-level and system-level evaluation.</li>
+                <li>Modeling of multipath propagation, fading, mobility, delay spread, Doppler effects, blockage, and dynamic interference.</li>
+                <li>Research on reliability-aware SINR and interference prediction, link adaptation, beamforming, and resource allocation.</li>
+                <li>Application of Bayesian inference, extreme value theory, Kalman filtering, machine learning, and distributionally robust optimization to wireless communication problems.</li>
+                <li>Contribution to 6G-ANNA and related 6G research activities.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="experience-card">
+              <div class="experience-header">
+                <h3 class="experience-title">Student Research Assistant</h3>
+                <span class="experience-period">Oct. 2021 – Aug. 2022</span>
+              </div>
+              <p class="experience-meta">University of Bremen / DFKI · Germany</p>
+              <p class="experience-summary">
+                Worked on AI, machine learning, and data-driven modeling for engineering and autonomous-system applications.
+              </p>
+              <ul class="experience-points">
+                <li>Dataset preparation, preprocessing, training, validation, and evaluation of machine-learning models.</li>
+                <li>Development and extension of Python- and C++-based research software.</li>
+                <li>Support for experimental analysis, technical documentation, and collaborative research workflows.</li>
+                <li>Experience with Linux-based development environments and HPC clusters.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="experience-card">
+              <div class="experience-header">
+                <h3 class="experience-title">Telecom Engineer, Deployment and Commissioning</h3>
+                <span class="experience-period">Jun. 2016 – Aug. 2018</span>
+              </div>
+              <p class="experience-meta">ZTE Nepal Pvt. Ltd. · Kathmandu, Nepal</p>
+              <p class="experience-summary">
+                Worked on deployment, commissioning, and field verification of cellular network equipment in operational 2G/3G/4G networks.
+              </p>
+              <ul class="experience-points">
+                <li>Site integration, commissioning, RF testing, and acceptance verification.</li>
+                <li>Troubleshooting of installation and deployment issues.</li>
+                <li>Coordination with technical teams during network rollout and field operations.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="experience-card">
+              <div class="experience-header">
+                <h3 class="experience-title">Telecom Engineer, Performance Analysis and Optimization</h3>
+                <span class="experience-period">Jun. 2016 – Aug. 2018</span>
+              </div>
+              <p class="experience-meta">ZTE Nepal Pvt. Ltd. · Kathmandu, Nepal</p>
+              <p class="experience-summary">
+                Worked on radio-network performance analysis, optimization, and measurement-based diagnosis for operational mobile networks.
+              </p>
+              <ul class="experience-points">
+                <li>Analysis of drive-test data, network logs, KPIs, and diagnostic measurements.</li>
+                <li>Identification of coverage, interference, throughput, and link-performance bottlenecks.</li>
+                <li>Support for network optimization, technical reporting, and evidence-based engineering decisions.</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
       </section>
 
       <section id="research" class="section-card">
@@ -829,19 +1023,103 @@
             </div>
           </li>
         </ol>
+
+        <h3 class="subsection-title">Proposed Thesis Topics</h3>
+        <ol class="pub-group" start="1">
+          <li>
+            <div class="pub-entry">
+              Learning-Based Beam Management and Beam Prediction for 6G Wireless Networks
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              Agentic AI for Physical-Layer Optimization in 6G Communication Systems
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              Digital Twin-Assisted Channel and Interference Modeling via Measurement Fusion
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              Reinforcement Learning-Based Link Adaptation for Reliable 5G/6G Communications
+            </div>
+          </li>
+        </ol>
       </section>
 
       <section id="skills" class="section-card">
-        <h2 class="section-title">Skills</h2>
-        <ul class="tag-list">
-          <li>Wireless communications research</li>
-          <li>Distributed beamforming</li>
-          <li>Agentic AI for RAN</li>
-          <li>Digital twin systems</li>
-          <li>Predictive interference management</li>
-          <li>HRLLC</li>
-          <li>Satcom</li>
-          <li>Sionna / Sionna-RT</li>
+        <h2 class="section-title">Technical Skills</h2>
+        <ul class="skill-groups">
+          <li class="skill-group-card">
+            <h3 class="skill-group-title">Wireless Communications and PHY/MAC</h3>
+            <ul class="skill-chip-list">
+              <li>5G/6G wireless systems</li>
+              <li>3GPP NR PHY</li>
+              <li>Link adaptation</li>
+              <li>Beamforming</li>
+              <li>Resource allocation</li>
+              <li>Interference analysis</li>
+              <li>Reliability-aware communication</li>
+              <li>Industrial subnetworks and HRLLC</li>
+              <li>Non-terrestrial networks</li>
+            </ul>
+          </li>
+          <li class="skill-group-card">
+            <h3 class="skill-group-title">Signal Processing and Channel Modeling</h3>
+            <ul class="skill-chip-list">
+              <li>Digital signal processing</li>
+              <li>OFDM</li>
+              <li>Multipath propagation</li>
+              <li>Fading channels</li>
+              <li>Mobility effects</li>
+              <li>Delay and Doppler analysis</li>
+              <li>TR 38.901 channel models</li>
+              <li>Ray tracing with Sionna/Sionna-RT</li>
+            </ul>
+          </li>
+          <li class="skill-group-card">
+            <h3 class="skill-group-title">Probabilistic Modeling and Optimization</h3>
+            <ul class="skill-chip-list">
+              <li>Bayesian inference</li>
+              <li>Extreme value theory</li>
+              <li>Kalman filtering</li>
+              <li>Heavy-tailed modeling</li>
+              <li>Stochastic modeling</li>
+              <li>Convex optimization</li>
+              <li>Distributionally robust optimization</li>
+              <li>CVaR-based reliability modeling</li>
+            </ul>
+          </li>
+          <li class="skill-group-card">
+            <h3 class="skill-group-title">Machine Learning for Wireless</h3>
+            <ul class="skill-chip-list">
+              <li>LSTM/GRU</li>
+              <li>Transformer-based prediction</li>
+              <li>Federated learning</li>
+              <li>Reinforcement learning</li>
+              <li>Learning-based link adaptation</li>
+              <li>Beam prediction</li>
+              <li>Measurement-data-driven modeling</li>
+            </ul>
+          </li>
+          <li class="skill-group-card">
+            <h3 class="skill-group-title">Programming and Tools</h3>
+            <ul class="skill-chip-list">
+              <li>MATLAB</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>Linux</li>
+              <li>OMNeT++</li>
+              <li>Wireshark</li>
+              <li>Sionna</li>
+              <li>Sionna-RT</li>
+              <li>Git/GitHub</li>
+              <li>Scientific visualization</li>
+              <li>Simulation and measurement-data analysis</li>
+            </ul>
+          </li>
         </ul>
       </section>
 
