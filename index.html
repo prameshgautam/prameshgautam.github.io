@@ -265,6 +265,69 @@
       margin-bottom: 0.25rem;
     }
 
+    .pub-note {
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+      color: var(--muted);
+    }
+
+    .pub-year {
+      margin: 1.6rem 0 0.8rem;
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .pub-year:first-of-type {
+      margin-top: 0;
+    }
+
+    .pub-group {
+      margin: 0;
+      padding-left: 1.4rem;
+    }
+
+    .pub-group li + li {
+      margin-top: 1rem;
+    }
+
+    .pub-entry {
+      padding: 1rem 1.1rem;
+      background: #fbfcfe;
+      border: 1px solid #edf1f5;
+      border-radius: 16px;
+    }
+
+    .pub-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .pub-tag {
+      display: inline-block;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .pub-title-link {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .pub-title-link:hover {
+      color: var(--accent);
+    }
+
     .muted {
       color: var(--muted);
     }
@@ -305,6 +368,10 @@
 
       .hero-card h2 {
         font-size: 1.65rem;
+      }
+
+      .pub-entry {
+        padding: 0.9rem;
       }
     }
   </style>
@@ -391,12 +458,139 @@
 
       <section id="publications" class="section-card">
         <h2 class="section-title">Publications</h2>
-        <ul class="item-list">
+        <p class="pub-note">For the most up-to-date list, please see my <a href="https://scholar.google.com/citations?hl=en&amp;user=f4sqgDQAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>.</p>
+
+        <h3 class="pub-year">2026</h3>
+        <ol class="pub-group" start="1">
           <li>
-            <span class="item-title">P. Gautam et al., “RASP: Reliability-Aware SINR Prediction for Realistic Industrial Subnetworks,” IEEE ICC 2026.</span>
-            <span class="muted">Conference publication</span>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Conference</span>
+              </div>
+              M. Vakilifard, <strong>P. Gautam</strong>, C. Bockelmann, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Deep Learning Based Link Quality Prediction for Direct-to-Device LEO Communication Under Inter-Constellation Interference”</strong></a>, <em>30. VDE/ITG Fachtagung Mobilkommunikation</em>, 2026.
+            </div>
           </li>
-        </ul>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Journal</span>
+              </div>
+              C. Bockelmann, A. Danaee, A. Dekorsy, <strong>P. Gautam</strong>, D. Wübben, et al., <a class="pub-title-link" href="#"><strong>“AI/ML-Driven 6G Network Solutions with Energy Efficiency Considerations”</strong></a>, <em>IEEE Access</em>, 2026.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Journal</span>
+              </div>
+              B. Banerjee, B. Agarwal, A. Ahmad, C. Bockelmann, <strong>P. Gautam</strong>, et al., <a class="pub-title-link" href="#"><strong>“6G PHY: Insights From 6G-ANNA Research Initiative”</strong></a>, <em>IEEE Open Journal of the Communications Society</em>, 2026.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Journal</span>
+              </div>
+              <strong>P. Gautam</strong>, B. A. G. R. Sharan, P. Baracca, C. Bockelmann, T. Wild, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“CQI-Based Interference Prediction for Link Adaptation in Industrial Sub-networks”</strong></a>, <em>IEEE Wireless Communications Letters</em>, 2026.
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="pub-year">2025</h3>
+        <ol class="pub-group" start="5">
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Journal</span>
+              </div>
+              <strong>P. Gautam</strong>, S. Sapkota, C. Bockelmann, S. R. Pandey, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Extreme Value Theory-Based Distributed Interference Prediction for 6G Industrial Sub-Networks”</strong></a>, <em>IEEE Open Journal of the Communications Society</em>, 2025.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Journal</span>
+              </div>
+              <strong>P. Gautam</strong>, C. Bockelmann, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Probabilistic Interference Prediction for Dynamic 6G In-X Sub-Networks”</strong></a>, <em>IEEE Open Journal of the Communications Society</em>, 2025.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Conference</span>
+              </div>
+              <strong>P. Gautam</strong>, C. Bockelmann, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Extreme Value Theory-Based Predictive Interference Management for 6G Subnetworks with Transformer”</strong></a>, <em>IEEE International Conference on Communications, ICC 2025</em>, 2025.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Conference</span>
+              </div>
+              <strong>P. Gautam</strong>, R. S. B. A. G., P. Baracca, C. Bockelmann, T. Wild, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Dynamic Interference Prediction for In-X 6G Sub-Networks”</strong></a>, <em>14th International ITG Conference on Systems, Communications and Coding, SCC 2025</em>, 2025.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Journal</span>
+              </div>
+              S. Shafaei, A. Palaios, Z. Ennaceur, J. Zhang, V. Pandit, <strong>P. Gautam</strong>, et al., <a class="pub-title-link" href="#"><strong>“Toward AI in 6G: Concepts, Techniques, and Standards”</strong></a>, <em>IEEE Access</em>, 2025.
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="pub-year">2024</h3>
+        <ol class="pub-group" start="10">
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Book/Report</span>
+              </div>
+              S. Baradie, L. Bassbouss, A. Bathelt, <strong>P. Gautam</strong>, et al., <a class="pub-title-link" href="#"><strong>“German Perspective on 6G Use Cases, Technical Building Blocks and Requirements”</strong></a>, <em>FAU University Press</em>, 2024.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Conference</span>
+              </div>
+              <strong>P. Gautam</strong>, C. Bockelmann, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Interference Prediction in Unconnected In-X Mobile 6G Subnetworks Using a Data-Driven Approach”</strong></a>, <em>IEEE International Conference on Communications Workshops, ICC Workshops</em>, 2024.
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="pub-year">2023</h3>
+        <ol class="pub-group" start="12">
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Conference</span>
+              </div>
+              <strong>P. Gautam</strong>, M. A. Vakilifard, C. Bockelmann, and A. Dekorsy, <a class="pub-title-link" href="#"><strong>“Cooperative Interference Estimation Using LSTM-Based Federated Learning for In-X Subnetworks”</strong></a>, <em>IEEE Global Communications Conference, GLOBECOM 2023</em>, 2023.
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="pub-year">Early Publications</h3>
+        <ol class="pub-group" start="13">
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Early Work</span>
+              </div>
+              <strong>P. Gautam</strong>, P. Lohani, and B. Mishra, <a class="pub-title-link" href="#"><strong>“Peak-to-Average Power Ratio Reduction in OFDM System Using Amplitude Clipping”</strong></a>, <em>IEEE Region 10 Conference, TENCON</em>, 2016.
+            </div>
+          </li>
+          <li>
+            <div class="pub-entry">
+              <div class="pub-header">
+                <span class="pub-tag">Early Work</span>
+              </div>
+              <strong>P. Gautam</strong>, <a class="pub-title-link" href="#"><strong>“Analysis of Effect of Clipping and High-Power Amplifier Non-linearities in OFDM System”</strong></a>, <em>Encipher</em>, 2015.
+            </div>
+          </li>
+        </ol>
       </section>
 
       <section id="projects" class="section-card">
