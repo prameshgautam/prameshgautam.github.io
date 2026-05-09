@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pramesh Gautam | Academic Website</title>
+  <title>Pramesh Gautam</title>
   <style>
     :root {
-      --bg: #f4f7fb;
+      --bg: #f7f8fb;
       --surface: #ffffff;
-      --surface-alt: #eef3f8;
-      --text: #18212b;
-      --muted: #5b6877;
-      --accent: #0f5c8a;
-      --accent-soft: #d9e9f4;
-      --border: #d8e1ea;
-      --shadow: 0 18px 45px rgba(15, 41, 66, 0.08);
-      --max-width: 1100px;
+      --text: #1e2430;
+      --muted: #5c6675;
+      --line: #dbe1ea;
+      --accent: #155d8b;
+      --accent-soft: #eaf2f8;
+      --shadow: 0 18px 40px rgba(17, 31, 52, 0.08);
+      --max-width: 1140px;
     }
 
     * {
@@ -28,12 +27,12 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(15, 92, 138, 0.12), transparent 28%),
-        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--text);
-      line-height: 1.7;
+      background:
+        linear-gradient(180deg, rgba(234, 242, 248, 0.5), rgba(247, 248, 251, 0.95) 180px),
+        var(--bg);
+      line-height: 1.75;
     }
 
     a {
@@ -45,279 +44,267 @@
       text-decoration: underline;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(92%, var(--max-width));
+      width: min(94%, var(--max-width));
       margin: 0 auto;
     }
 
     .site-header {
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(248, 251, 255, 0.88);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(216, 225, 234, 0.8);
+      z-index: 20;
+      backdrop-filter: blur(10px);
     }
 
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 1rem;
       padding: 1rem 0;
     }
 
-    .brand {
+    .site-name {
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      font-family: "Segoe UI", Arial, sans-serif;
       font-size: 0.95rem;
     }
 
-    .hero {
-      padding: 5.5rem 0 3.5rem;
-    }
-
-    .hero-grid {
+    .layout {
       display: grid;
-      grid-template-columns: 1.4fr 0.9fr;
-      gap: 2rem;
-      align-items: stretch;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 2.5rem;
+      padding: 2.5rem 0 4rem;
     }
 
-    .hero-card,
-    .panel {
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(216, 225, 234, 0.95);
+    .sidebar {
+      position: sticky;
+      top: 5.5rem;
+      align-self: start;
+    }
+
+    .profile-card,
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
       box-shadow: var(--shadow);
-      border-radius: 24px;
     }
 
-    .hero-card {
-      padding: 3rem;
+    .profile-card {
+      overflow: hidden;
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+    .profile-image {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .profile-body {
+      padding: 1.5rem;
     }
 
     h1,
     h2,
     h3 {
-      margin-top: 0;
       line-height: 1.2;
+      margin-top: 0;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      margin-bottom: 0.75rem;
+      font-size: 2rem;
+      margin-bottom: 0.55rem;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
+    .profile-title {
+      margin: 0 0 1rem;
       color: var(--muted);
-      max-width: 42rem;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
     }
 
-    .intro {
-      margin: 0 0 1.75rem;
-      color: #293340;
-      max-width: 48rem;
+    .profile-intro {
+      margin: 0 0 1.25rem;
+      font-size: 0.98rem;
+      color: #303847;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
+    .contact-list,
+    .plain-list,
+    .links-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.85rem 1.2rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .contact-list li,
+    .links-list li {
+      padding: 0.4rem 0;
+      border-top: 1px solid #edf1f5;
+      font-size: 0.96rem;
     }
 
-    .button.primary {
-      background: var(--accent);
-      color: #ffffff;
+    .contact-list li:first-child,
+    .links-list li:first-child {
+      border-top: 0;
+      padding-top: 0;
     }
 
-    .button.secondary {
-      background: #ffffff;
+    .links-block {
+      margin-top: 1.35rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .links-heading {
+      margin-bottom: 0.7rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .content {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .hero-card {
+      padding: 2.2rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--accent-soft);
       color: var(--accent);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
 
-    .button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 20px rgba(15, 92, 138, 0.14);
-      text-decoration: none;
+    .hero-card h2 {
+      font-size: 2rem;
+      margin-bottom: 0.9rem;
     }
 
-    .panel {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1.5rem;
+    .hero-card p {
+      margin: 0;
+      color: #2f3746;
+      font-size: 1.05rem;
     }
 
-    .panel h2 {
-      font-size: 1.1rem;
+    .section-card {
+      padding: 1.9rem 2rem;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
       margin-bottom: 1rem;
     }
 
-    .stat-list,
-    .tag-list,
-    .project-list,
-    .pub-list,
-    .skill-list,
-    .contact-list {
+    .section-card p {
+      margin: 0.6rem 0 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    .stat-list li + li,
-    .project-list li + li,
-    .pub-list li + li,
-    .contact-list li + li {
-      margin-top: 0.95rem;
-    }
-
-    .stat-label {
-      display: block;
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .stat-value {
-      font-weight: 600;
-    }
-
-    main {
-      padding-bottom: 4rem;
-    }
-
-    .section {
-      margin-top: 2rem;
-    }
-
-    .section-card {
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid rgba(216, 225, 234, 0.95);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 2.3rem;
-    }
-
-    .section-heading {
-      margin-bottom: 1.2rem;
-      font-size: 1.6rem;
-    }
-
-    .tag-list,
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .tag-list li,
-    .skill-list li {
-      background: var(--surface-alt);
-      color: var(--text);
-      padding: 0.7rem 1rem;
+    .tag-list li {
+      background: #f8fafc;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      border: 1px solid var(--border);
+      padding: 0.55rem 0.95rem;
       font-size: 0.95rem;
+      color: #293341;
     }
 
-    .project-list li,
-    .pub-list li {
-      padding: 1rem 1.1rem;
-      border-left: 4px solid var(--accent);
-      background: #fbfdff;
-      border-radius: 0 16px 16px 0;
+    .item-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .project-title,
-    .pub-title {
-      font-weight: 700;
+    .item-list li + li {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #edf1f5;
+    }
+
+    .item-title {
       display: block;
-      margin-bottom: 0.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
     }
 
-    .contact-list a {
-      font-weight: 600;
+    .muted {
+      color: var(--muted);
     }
 
     .footer {
-      padding: 1.5rem 0 3rem;
+      padding: 0 0 3rem;
       color: var(--muted);
       text-align: center;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 960px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
       .nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .hero {
-        padding-top: 4.5rem;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
+      .nav-links {
+        gap: 0.8rem;
       }
 
       .hero-card,
-      .panel,
-      .section-card {
-        padding: 1.6rem;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .nav-links {
-        gap: 0.75rem;
-        font-size: 0.9rem;
+      .section-card,
+      .profile-body {
+        padding: 1.4rem;
       }
 
-      h1 {
-        font-size: 2.3rem;
-      }
-
-      .subtitle {
-        font-size: 1.05rem;
-      }
-
-      .button {
-        width: 100%;
+      .hero-card h2 {
+        font-size: 1.65rem;
       }
     }
   </style>
@@ -325,10 +312,10 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <div class="brand">Pramesh Gautam</div>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
+      <div class="site-name">Pramesh Gautam</div>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#about">About Me</a>
+        <a href="#research">Research Interests</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -337,165 +324,128 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <span class="eyebrow">Academic Profile</span>
+  <div class="container layout">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img class="profile-image" src="pramesh.jpeg" alt="Portrait of Pramesh Gautam">
+        <div class="profile-body">
           <h1>Pramesh Gautam</h1>
-          <p class="subtitle">PhD Candidate / Research Assistant in Wireless Communications</p>
-          <p class="intro">
-            I work on next-generation wireless systems with a focus on dependable and efficient communication
-            for challenging network environments. My interests span theory, optimization, and simulation-driven
-            research for future 6G and industrial wireless applications.
+          <p class="profile-title">PhD Candidate / Research Assistant in Wireless Communications</p>
+          <p class="profile-intro">
+            Researching reliable and intelligent wireless systems for future 6G, industrial, and non-terrestrial communication networks.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">Get in Touch</a>
-            <a class="button secondary" href="#publications">View Publications</a>
-          </div>
-        </div>
 
-        <aside class="panel">
-          <div>
-            <h2>Profile Links</h2>
-            <ul class="stat-list">
-              <li>
-                <span class="stat-label">Google Scholar</span>
-                <span class="stat-value"><a href="#" target="_blank" rel="noopener noreferrer">Scholar Profile</a></span>
-              </li>
-              <li>
-                <span class="stat-label">LinkedIn</span>
-                <span class="stat-value"><a href="#" target="_blank" rel="noopener noreferrer">Professional Profile</a></span>
-              </li>
-              <li>
-                <span class="stat-label">GitHub</span>
-                <span class="stat-value"><a href="#" target="_blank" rel="noopener noreferrer">Code Repository</a></span>
-              </li>
-              <li>
-                <span class="stat-label">Curriculum Vitae</span>
-                <span class="stat-value"><a href="#" target="_blank" rel="noopener noreferrer">Download CV</a></span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2>Current Focus</h2>
-            <ul class="tag-list">
-              <li>6G Systems</li>
-              <li>NTN</li>
-              <li>SINR Prediction</li>
-              <li>Beamforming</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="section-heading">About Me</h2>
-          <p>
-            I am Pramesh Gautam, a PhD Candidate and Research Assistant in Wireless Communications. My research
-            centers on designing robust, reliable, and intelligent communication strategies for future wireless
-            systems, especially in industrial and non-terrestrial scenarios.
-          </p>
-          <p>
-            I am particularly interested in connecting advanced signal processing, optimization, and realistic
-            simulation environments to solve practical problems in modern wireless networks.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="research" class="section">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="section-heading">Research Interests</h2>
-          <ul class="tag-list">
-            <li>6G wireless communications</li>
-            <li>Non-terrestrial networks</li>
-            <li>Reliability-aware SINR prediction</li>
-            <li>Link adaptation</li>
-            <li>Distributed beamforming</li>
-            <li>Industrial subnetworks and HRLLC</li>
-            <li>Distributionally robust optimization</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="section">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="section-heading">Publications</h2>
-          <ul class="pub-list">
-            <li>
-              <span class="pub-title">Conference Paper</span>
-              P. Gautam et al., “RASP: Reliability-Aware SINR Prediction for Realistic Industrial Subnetworks,” IEEE ICC 2026.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="section-heading">Projects</h2>
-          <ul class="project-list">
-            <li>
-              <span class="project-title">Reliability-aware link adaptation for industrial subnetworks</span>
-              Exploring adaptive transmission strategies for dependable communication in realistic industrial settings.
-            </li>
-            <li>
-              <span class="project-title">Distributionally robust cooperative LEO satellite beamforming</span>
-              Investigating optimization methods for uncertainty-aware cooperative beamforming in non-terrestrial networks.
-            </li>
-            <li>
-              <span class="project-title">Sionna/Sionna-RT based wireless simulation frameworks</span>
-              Building reusable simulation pipelines for evaluating advanced wireless communication algorithms.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="section-heading">Skills</h2>
-          <ul class="skill-list">
-            <li>Wireless communications research</li>
-            <li>Optimization and mathematical modeling</li>
-            <li>Link-level and system-level simulation</li>
-            <li>Sionna / Sionna-RT</li>
-            <li>SINR prediction and link adaptation</li>
-            <li>Beamforming and NTN systems</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-card">
-          <h2 class="section-heading">Contact</h2>
           <ul class="contact-list">
-            <li>Email: <a href="mailto:pramesh.gautam12@gmail.com">pramesh.gautam12@gmail.com</a></li>
-            <li>GitHub: <a href="#" target="_blank" rel="noopener noreferrer">Add your profile link</a></li>
-            <li>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">Add your LinkedIn link</a></li>
-            <li>Google Scholar: <a href="#" target="_blank" rel="noopener noreferrer">Add your Scholar link</a></li>
+            <li><strong>Email:</strong> <a href="mailto:pramesh.gautam12@gmail.com">pramesh.gautam12@gmail.com</a></li>
           </ul>
+
+          <div class="links-block">
+            <div class="links-heading">Profiles</div>
+            <ul class="links-list">
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://github.com/prameshgautam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">CV</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </aside>
+
+    <main class="content">
+      <section class="hero-card section-card">
+        <span class="eyebrow">Academic Website</span>
+        <h2>Wireless Communications Research for Reliable Next-Generation Networks</h2>
+        <p>
+          I am interested in robust and practical approaches to future wireless communication systems, with a focus on
+          6G wireless communications, industrial subnetworks, non-terrestrial networks, and optimization-driven signal
+          processing. My work connects modeling, simulation, and algorithm design for dependable wireless performance.
+        </p>
+      </section>
+
+      <section id="about" class="section-card">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          I am Pramesh Gautam, a PhD Candidate and Research Assistant in Wireless Communications. My research centers
+          on reliable and adaptive communication strategies for challenging wireless environments, particularly in
+          industrial and non-terrestrial settings.
+        </p>
+        <p>
+          I am especially interested in how predictive methods, distributed optimization, and realistic simulation
+          frameworks can improve system robustness and support the demands of future wireless networks.
+        </p>
+      </section>
+
+      <section id="research" class="section-card">
+        <h2 class="section-title">Research Interests</h2>
+        <ul class="tag-list">
+          <li>6G wireless communications</li>
+          <li>Non-terrestrial networks</li>
+          <li>Reliability-aware SINR prediction</li>
+          <li>Link adaptation</li>
+          <li>Distributed beamforming</li>
+          <li>Industrial subnetworks and HRLLC</li>
+          <li>Distributionally robust optimization</li>
+        </ul>
+      </section>
+
+      <section id="publications" class="section-card">
+        <h2 class="section-title">Publications</h2>
+        <ul class="item-list">
+          <li>
+            <span class="item-title">P. Gautam et al., “RASP: Reliability-Aware SINR Prediction for Realistic Industrial Subnetworks,” IEEE ICC 2026.</span>
+            <span class="muted">Conference publication</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section-card">
+        <h2 class="section-title">Projects</h2>
+        <ul class="item-list">
+          <li>
+            <span class="item-title">Reliability-aware link adaptation for industrial subnetworks</span>
+            Developing dependable link adaptation strategies for realistic industrial wireless systems.
+          </li>
+          <li>
+            <span class="item-title">Distributionally robust cooperative LEO satellite beamforming</span>
+            Studying cooperative beamforming techniques under uncertainty in non-terrestrial wireless networks.
+          </li>
+          <li>
+            <span class="item-title">Sionna/Sionna-RT based wireless simulation frameworks</span>
+            Building reusable simulation pipelines for evaluating wireless algorithms in realistic propagation settings.
+          </li>
+        </ul>
+      </section>
+
+      <section id="skills" class="section-card">
+        <h2 class="section-title">Skills</h2>
+        <ul class="tag-list">
+          <li>Wireless communications research</li>
+          <li>SINR prediction</li>
+          <li>Link adaptation</li>
+          <li>Distributed beamforming</li>
+          <li>Distributionally robust optimization</li>
+          <li>Sionna / Sionna-RT</li>
+          <li>Simulation framework development</li>
+          <li>Industrial and NTN systems</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section-card">
+        <h2 class="section-title">Contact</h2>
+        <p>
+          The best way to reach me is by email at
+          <a href="mailto:pramesh.gautam12@gmail.com">pramesh.gautam12@gmail.com</a>.
+        </p>
+        <p>
+          You can also add your Google Scholar, LinkedIn, and CV links in the profile section once those pages are ready.
+        </p>
+      </section>
+    </main>
+  </div>
 
   <footer class="footer">
-    <div class="container">
-      © 2026 Pramesh Gautam. Built with HTML and CSS for GitHub Pages.
-    </div>
+    <div class="container">© 2026 Pramesh Gautam. Hosted on GitHub Pages.</div>
   </footer>
 </body>
 </html>
