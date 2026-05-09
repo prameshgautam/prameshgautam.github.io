@@ -328,6 +328,54 @@
       color: var(--accent);
     }
 
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-card {
+      height: 100%;
+      padding: 1.15rem;
+      border: 1px solid #edf1f5;
+      border-radius: 18px;
+      background: #fbfcfe;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .project-logo-wrap {
+      width: 100%;
+      min-height: 86px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid #eef2f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem;
+    }
+
+    .project-logo {
+      max-width: 100%;
+      max-height: 64px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .project-name {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
     .muted {
       color: var(--muted);
     }
@@ -596,18 +644,30 @@
 
       <section id="projects" class="section-card">
         <h2 class="section-title">Projects</h2>
-        <ul class="item-list">
+        <ul class="project-grid">
           <li>
-            <span class="item-title">Reliability-aware link adaptation for industrial subnetworks</span>
-            Developing dependable link adaptation strategies for realistic industrial wireless systems.
+            <div class="project-card">
+              <div class="project-logo-wrap">
+                <img class="project-logo" src="6G-ANNA.png" alt="6G-ANNA logo">
+              </div>
+              <p class="project-name">6G-ANNA</p>
+            </div>
           </li>
           <li>
-            <span class="item-title">Distributionally robust cooperative LEO satellite beamforming</span>
-            Studying cooperative beamforming techniques under uncertainty in non-terrestrial wireless networks.
+            <div class="project-card">
+              <div class="project-logo-wrap">
+                <img class="project-logo" src="Open6GHub-Logo.png" alt="Open6GHUB logo">
+              </div>
+              <p class="project-name">Open6GHUB</p>
+            </div>
           </li>
           <li>
-            <span class="item-title">Sionna/Sionna-RT based wireless simulation frameworks</span>
-            Building reusable simulation pipelines for evaluating wireless algorithms in realistic propagation settings.
+            <div class="project-card">
+              <div class="project-logo-wrap">
+                <img class="project-logo" src="Open6GHub+.svg" alt="Open6GHUBPLUS logo">
+              </div>
+              <p class="project-name">Open6GHUBPLUS</p>
+            </div>
           </li>
         </ul>
       </section>
