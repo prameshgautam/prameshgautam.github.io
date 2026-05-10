@@ -407,6 +407,25 @@
       font-weight: 700;
     }
 
+    .experience-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+
+    .institution-logo {
+      flex: 0 0 auto;
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #ffffff, #f5f9fc);
+      border: 1px solid #e6eef5;
+      padding: 0.45rem;
+      object-fit: contain;
+      box-shadow: var(--shadow-soft);
+    }
+
     .experience-period {
       color: var(--accent);
       font-size: 0.9rem;
@@ -656,6 +675,15 @@
         padding: 1rem;
       }
 
+      .experience-title-group {
+        gap: 0.7rem;
+      }
+
+      .institution-logo {
+        width: 48px;
+        height: 48px;
+      }
+
       .profile-highlights {
         grid-template-columns: 1fr;
       }
@@ -751,7 +779,10 @@
           <li>
             <article class="experience-card">
               <div class="experience-header">
-                <h3 class="experience-title">PhD, University of Bremen</h3>
+                <div class="experience-title-group">
+                  <img class="institution-logo" src="logo_ub_2021.png" alt="University of Bremen logo">
+                  <h3 class="experience-title">PhD, University of Bremen</h3>
+                </div>
                 <span class="experience-period">Ongoing</span>
               </div>
               <p class="experience-meta">Communications Engineering · Bremen, Germany</p>
@@ -760,7 +791,10 @@
           <li>
             <article class="experience-card">
               <div class="experience-header">
-                <h3 class="experience-title">M.Sc., University of Bremen</h3>
+                <div class="experience-title-group">
+                  <img class="institution-logo" src="logo_ub_2021.png" alt="University of Bremen logo">
+                  <h3 class="experience-title">M.Sc., University of Bremen</h3>
+                </div>
               </div>
               <p class="experience-meta">Communication and Information Technology · Bremen, Germany</p>
             </article>
@@ -768,7 +802,10 @@
           <li>
             <article class="experience-card">
               <div class="experience-header">
-                <h3 class="experience-title">B.E., Kathmandu University</h3>
+                <div class="experience-title-group">
+                  <img class="institution-logo" src="Kathmandu_University_Logo.png" alt="Kathmandu University logo">
+                  <h3 class="experience-title">B.E., Kathmandu University</h3>
+                </div>
               </div>
               <p class="experience-meta">Electrical and Electronics Engineering (Communication) · Nepal</p>
             </article>
